@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Xplor</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="app_id">1447558658853769</string>
+    <string name="welcome">Welcome</string>
+    <string name="title_activity_sign_up">Sign Up</string>
+    <string name="fb_signUp">Sign Up With Facebook</string>
+    <string name="fb_logout">Logout</string>
+
+</resources>
