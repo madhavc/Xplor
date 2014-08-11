@@ -77,7 +77,6 @@ public class LoginActivity extends Activity {
 		//mLogoutButton = (Button) findViewById(R.id.fb_logout_button);
 
 		setLogin();
-		setLogout();
 		setUIState();
 	}
 
@@ -136,50 +135,6 @@ public class LoginActivity extends Activity {
 	}
 
 
-	/**
-	 * Below class is used to set the logout listener 
-	 * using the SimpleFacebook SDK.
-	 */
-	private void setLogout() {
-		final OnLogoutListener onLogoutListener = new OnLogoutListener() {
-
-			@Override
-			public void onFail(String reason) {
-				//mTextStatus.setText(reason);
-				Log.w(TAG, "Failed to login");
-			}
-
-			@Override
-			public void onException(Throwable throwable) {
-				//mTextStatus.setText("Exception: " + throwable.getMessage());
-				Log.e(TAG, "Bad thing happened", throwable);
-			}
-
-			@Override
-			public void onThinking() {
-				// show progress bar or something to the user while login is
-				// happening
-				//mTextStatus.setText("Thinking...");
-				setProgressBarIndeterminateVisibility(true);
-			}
-
-			@Override
-			public void onLogout() {
-				setProgressBarIndeterminateVisibility(false);
-				// change the state of the button or do whatever you want
-				//mTextStatus.setText("Logged out");
-				loggedOutUIState();
-				Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-				startActivity(intent);
-				finish();
-			}
-
-		};
-
-		/*if(item.getItemId() == R.id.fb_logout)
-			mSimpleFacebook.logout(onLogoutListener);*/
-	}
-
 	private void setUIState() {
 		if (mSimpleFacebook.isLogin()) {
 			loggedInUIState();
@@ -212,25 +167,4 @@ public class LoginActivity extends Activity {
 		mSimpleFacebook.onActivityResult(this, requestCode, resultCode, data); 
 		super.onActivityResult(requestCode, resultCode, data);
 	} 
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.sign_up, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
 }
