@@ -28,7 +28,7 @@ public class LoginActivity extends Activity {
 
 	private static final String TAG = "LoginActivity";
 
-	public SimpleFacebook mSimpleFacebook;
+	protected static SimpleFacebook mSimpleFacebook;
 
 	MenuItem item;
 
@@ -169,6 +169,9 @@ public class LoginActivity extends Activity {
 				// change the state of the button or do whatever you want
 				//mTextStatus.setText("Logged out");
 				loggedOutUIState();
+				Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+				startActivity(intent);
+				finish();
 			}
 
 		};
