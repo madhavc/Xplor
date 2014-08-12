@@ -53,9 +53,11 @@ public class LoginActivity extends Activity {
 
 		//Setting permissions and configuring facebook using SimpleFacebook SDK.
 		Permission[] permissions = new Permission[] {
+				Permission.PUBLIC_PROFILE, 
 				Permission.USER_PHOTOS,
 				Permission.EMAIL,
 				Permission.PUBLISH_ACTION
+				
 		};
 		SimpleFacebookConfiguration configuration = new SimpleFacebookConfiguration.Builder()
 		.setAppId("1447558658853769")
