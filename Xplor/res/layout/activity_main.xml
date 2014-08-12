@@ -9,13 +9,14 @@
     tools:context="co.xplorr.MainActivity" >
 
     <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="34dp"
-        android:text="@string/welcome" />
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:textSize="15sp"
+        tools:ignore="SmallSp" />
 
 </RelativeLayout>

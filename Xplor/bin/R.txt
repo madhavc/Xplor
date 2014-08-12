@@ -119,7 +119,7 @@ int id large 0x7f040002
 int id normal 0x7f040001
 int id picker_subtitle 0x7f040016
 int id small 0x7f040000
-int id welcome 0x7f040005
+int id user_name 0x7f040005
 int layout activity_login 0x7f030000
 int layout activity_main 0x7f030001
 int layout activity_splash 0x7f030002
@@ -172,8 +172,10 @@ int string com_facebook_usersettingsfragment_logged_in 0x7f070009
 int string com_facebook_usersettingsfragment_not_logged_in 0x7f07000a
 int string fb_logout 0x7f070021
 int string fb_signUp 0x7f070020
+int string result 0x7f070022
 int string title_activity_sign_up 0x7f07001f
 int string title_activity_splash 0x7f07001c
+int string user_name 0x7f070023
 int string welcome 0x7f07001e
 int style AppBaseTheme 0x7f080003
 int style AppTheme 0x7f080004

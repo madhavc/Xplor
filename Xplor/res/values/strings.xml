@@ -9,5 +9,7 @@
     <string name="title_activity_sign_up">Sign Up</string>
     <string name="fb_signUp">Sign Up With Facebook</string>
     <string name="fb_logout">Logout</string>
+    <string name="result">Results</string>
+    <string name="user_name">Name</string>
 
 </resources>
